@@ -39,13 +39,13 @@ from bs4 import BeautifulSoup
 def getTitle(url):
     try:
         html = urlopen(url)
-    except HTTPError as e:
+    except HTTPError:
         return None
     
     try:
         data = BeautifulSoup(html.read(), 'html.parser')
         title = data.body.h1
-    except AttributeError as e:
+    except AttributeError:
         return None
     return title
 
