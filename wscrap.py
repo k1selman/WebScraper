@@ -17,7 +17,6 @@ bs = BeautifulSoup(ht.read(), 'html.parser')
 
 print(bs.h3)
 
-
 from urllib.request import urlopen
 from urllib.error import HTTPError
 from urllib.error import URLError
